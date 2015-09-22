@@ -9,17 +9,20 @@ def username():
     return (uname)
 
 def check_username(uname):
-    if len(uname) > 0 and uname.isalpha():
-        print "Hello " + uname + "!"
-    elif len(uname) == 0:
-        print "Please Try again. You should type your name and press Enter key"
-    elif not uname.isalpha():
-        print "Please use only alphabetical characters."
+    while len(uname) == 0 or not uname.isalpha():
+        if len(uname) == 0:
+            print "Please Try again. You should type your name and press Enter key"
+        elif not uname.isalpha():
+            print "Please use only alphabetical characters."
+
+        uname = raw_input("Enter Your Name, Please:")
+    else:       
+        print "Hi " + uname + "! I want to play a game"
 
 def pyg():
     pyg = 'ay'
 
-    original = raw_input('Enter a word:')
+    original = raw_input('Enter any one word:')
 
     if len(original) > 0 and original.isalpha():
         print original
@@ -35,5 +38,6 @@ def pyg():
 
 n = username()
 check_username(n)
+pyg()
 
 print 'End of code'
