@@ -21,20 +21,19 @@ def check_username(uname):
 
 def pyg():
     pyg = 'ay'
-
     original = raw_input('Enter any one word:')
 
     if len(original) > 0 and original.isalpha():
-        print original
+        print original + "?"
     else:
-        print 'empty'
+        print 'You should type any English word'
         
     word = original.lower()
     first = word[0]
     new_word = word + first + pyg
     new_word = new_word[1:len(new_word)]
 
-    print new_word
+    print "In Pig Latin language " + original + " will be: " + new_word
 
 n = username()
 check_username(n)
