@@ -5,7 +5,7 @@ print '--== Pig Latin (oo) Igpay Atinlay ==--'
 print 'Welcome to the Pig Latin Translator!'
 
 def username():
-    uname = raw_input("Enter Your Name, Please:")
+    uname = raw_input("Enter Your Name, Please:\n")
     return (uname)
 
 def check_username(uname):
@@ -15,13 +15,13 @@ def check_username(uname):
         elif not uname.isalpha():
             print "Please use only alphabetical characters."
 
-        uname = raw_input("Enter Your Name, Please:")
+        uname = raw_input("Enter Your Name, Please:\n")
     else:       
         print "Hi " + uname + "! I want to play a game"
 
 def pyg():
     pyg = 'ay'
-    original = raw_input('Enter any one word:')
+    original = raw_input('Enter any one word:\n ')
 
     if len(original) > 0 and original.isalpha():
         print original + "?"
